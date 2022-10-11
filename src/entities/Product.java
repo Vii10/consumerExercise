@@ -22,8 +22,8 @@ public class Product {
 		this.value = value;
 	}
 	
-	public static void priceUpdater(Product p) {
-		p.setValue(p.getValue() * 1.1);
+	public void priceUpdaterNS() {
+		value = value * 1.1;
 	}
 	
 	@Override

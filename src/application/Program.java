@@ -3,7 +3,6 @@ package application;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.function.Consumer;
 
 import entities.Product;
 
@@ -18,16 +17,8 @@ public class Program {
 		list.add(new Product("Mouse", 50.00));
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("Hd Case", 80.90));
-		
-		Consumer<Product> prod = new Consumer<Product>() {
-			
-			@Override
-			public void accept(Product p) {
-				p.setValue(p.getValue() * 1.1);
-			}
-		};
-		
-		list.forEach(prod);
+
+		list.forEach(p -> p.setValue(p.getValue() * 1.1));
 		list.forEach(System.out::println);
 	}
 

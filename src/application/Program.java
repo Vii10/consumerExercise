@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Locale;
 
 import entities.Product;
-import util.AutoPriceUpdater;
 
 public class Program {
 
@@ -19,7 +18,7 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("Hd Case", 80.90));
 		
-		list.forEach(new AutoPriceUpdater());
+		list.forEach(Product::priceUpdater);
 		list.forEach(System.out::println);
 	}
 

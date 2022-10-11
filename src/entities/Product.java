@@ -21,10 +21,14 @@ public class Product {
 	public void setValue(double value) {
 		this.value = value;
 	}
+	
+	public static void priceUpdater(Product p) {
+		p.setValue(p.getValue() * 1.1);
+	}
+	
 	@Override
 	public String toString() {
 		return name + ", " + String.format("%.2f", value);
 	}
-	
 	
 }
